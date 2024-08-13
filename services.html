@@ -193,7 +193,7 @@
         }
 
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-         {
+        html {
             line-height: 1.15;
             -webkit-text-size-adjust: 100%
         }
@@ -376,7 +376,7 @@
             display: none
         }
 
-         {
+        html {
             scrollbar-width: thin;
             font-family: Matter, sans-serif;
             font-size: 2.66vw;
@@ -386,7 +386,7 @@
         }
 
         @media (min-width:768px) {
-             {
+            html {
                 font-size: .625vw
             }
         }
@@ -4043,14 +4043,12 @@
         .cb-tophead-title {
             font-weight: 300;
             font-size: 4.8rem;
-            line-height: 89%;
             letter-spacing: -.04em
         }
 
         @media (min-width:768px) {
             .cb-tophead-title {
                 font-size: 12.32rem;
-                line-height: 90%
             }
         }
 
@@ -7016,7 +7014,22 @@
             .cb-footer-link:hover:before {
                 transform: scaleX(1)
             }
+        }     
+        
+        @media (max-width: 767px), (orientation: portrait) {
+            .cb-btn_cta.-md.-inverse {
+                font-size: 5vw; /* Adjust the font size based on the viewport width */
+                word-wrap: break-word; /* Allow the text to break into a new line if necessary */
+                text-align: center; /* Center the text */
+                padding: 0.8rem 1.5rem; /* Adjust padding to make it more compact */
+                max-width: 90vw; /* Ensure the button does not exceed 90% of the viewport width */
+                margin: 0 auto; /* Center the button within the available space */
+                box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+            }
         }
+
+
+        
     </style>
 </head>
 
