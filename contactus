@@ -7049,16 +7049,16 @@
                         </div>
                         <nav class="cb-navbar-menu-navs" data-cursor="-opaque">
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav"
-                                    href="/index.html"><span class="cb-btn_nav-title"><span
+                                    href="/index"><span class="cb-btn_nav-title"><span
                                             data-text="Home">Home</span></span></a></div>
-                            <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav" href="/services.html"><span
+                            <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav" href="/services"><span
                                         class="cb-btn_nav-title"><span data-text="Services">Services</span></span></a>
                             </div>
-                            <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav" href="/company.html"><span
+                            <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav" href="/company"><span
                                         class="cb-btn_nav-title"><span data-text="Company">Company</span></span></a>
                             </div>
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav -underline"
-                                    href="/contact.html"><span class="cb-btn_nav-title"><span
+                                    href="/contactus"><span class="cb-btn_nav-title"><span
                                             data-text="Contact Us">Contact Us</span></span></a></div>
                         </nav>
                     </div>
