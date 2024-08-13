@@ -7038,6 +7038,64 @@
                 transform: scaleX(1)
             }
         }
+        @media (max-width: 767px), (orientation: portrait) {
+            .cb-btn_cta.-md.-inverse {
+                font-size: 5vw; /* Adjust the font size based on the viewport width */
+                word-wrap: break-word; /* Allow the text to break into a new line if necessary */
+                text-align: center; /* Center the text */
+                padding: 0.8rem 1.5rem; /* Adjust padding to make it more compact */
+                max-width: 90vw; /* Ensure the button does not exceed 90% of the viewport width */
+                margin: 0 auto; /* Center the button within the available space */
+                box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+            }
+        }
+        @media (max-width: 768px), (orientation: portrait) {
+            .cb-navbar-strip {
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            .cb-navbar-grid {
+                justify-content: flex-start;
+             }
+
+            .cb-navbar-logo {
+                display: flex;
+                align-items: center; /* Centers vertically */
+                justify-content: flex-start; /* Aligns the logo to the left */
+                height: 70px;
+                transform: translateX(-185px); /* Adjusts the centering offset */
+                top:15px;                
+            }
+            .cb-outro-header h2 {
+                font-size: 19vw; /* Adjust the vw value to fit the text on one line */
+                white-space: nowrap; /* Ensures the text doesn't wrap to the next line */
+            }
+        }
+
+        @media (max-width: 768px), (orientation: portrait) {
+            .header-container { /* Replace with the actual container class or ID */
+                padding-top: 0.5rem; /* Adjust this value to move the logo higher */
+            }
+            
+            .logo { /* Replace with the actual logo class or ID */
+                margin-top: 0; /* Ensure there’s no margin pushing it down */
+                position: relative; /* If necessary, adjust the positioning */
+            }
+            .logo-container {
+                display: flex;
+                justify-content: flex-start; /* Aligns the logo to the start of the container */
+            }
+            .logo-container {
+                padding-left: 0; /* or adjust to a smaller value */
+                margin-left:  0; /* or adjust to a smaller value */
+            }
+            .header, .cb-menu-logo {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start; /* This ensures alignment at the start */
+            }
+        }
     </style>
 </head>
 
