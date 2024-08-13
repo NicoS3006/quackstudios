@@ -23,7 +23,7 @@
     />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=3.0"
+      content="width=device-width, initial-scale=1.0"
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#121212" />
@@ -3606,6 +3606,107 @@
           transform: scaleX(1);
         }
       }
+
+      @media (max-width: 767px), (orientation: portrait) {
+        .cb-btn_cta.-md.-inverse {
+          font-size: 5vw; /* Adjust the font size based on the viewport width */
+          word-wrap: break-word; /* Allow the text to break into a new line if necessary */
+          text-align: center; /* Center the text */
+          padding: 0.8rem 1.5rem; /* Adjust padding to make it more compact */
+          max-width: 90vw; /* Ensure the button does not exceed 90% of the viewport width */
+          margin: 0 auto; /* Center the button within the available space */
+          box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+        }
+      }
+      
+      @media (max-width: 767px), (orientation: portrait) {
+        .cb-postcard-bg {
+          height: auto; /* Allows the background to expand with content */
+          min-height: 100%; /* Ensures the background at least covers the height of its content */
+          display: flex;
+          flex-direction: column;
+        }
+
+        .cb-postcard-content {
+          flex: 1; /* Ensures the content expands to fill the available space */
+        }
+      }
+      
+      @media (max-width: 767px), (orientation: portrait) {
+        .word { /* Replace with the specific class or element identifier */
+          font-size: 8vw; /* Adjust the font size proportionally to the viewport width */
+          line-height: 1.1em; /* Ensure that the line height is appropriate */
+          word-break: break-word; /* Breaks the word to fit within the container */
+        }
+      }
+        html, body {
+          overflow-x: hidden; /* Prevent horizontal scrolling */
+          width: 100%; /* Ensure that the body takes up the full width of the viewport */
+          box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        .container {
+          max-width: 100vw; /* Ensure that containers do not exceed the viewport width */
+          overflow-x: hidden; /* Prevent any horizontal overflow within containers */
+          box-sizing: border-box; /* Make sure padding and borders are included in width/height */
+        }
+
+        * {
+          box-sizing: inherit; /* Apply box-sizing to all elements */
+        }
+      @media (max-width: 600px) {
+        .-word {
+          font-size: 13vw; /* Adjust the font size based on viewport width */
+          word-wrap: break-word; /* Break the word if it is too long */
+          hyphens: auto; /* Add hyphenation if needed */
+          line-height: 1.1; /* Adjust line height to make it fit better */
+          max-width: 100vw; /* Ensure the word does not exceed the viewport width */
+          white-space: nowrap; /* Prevent the word from breaking onto a new line */
+        }
+      }
+
+      @media (max-width: 768px), (orientation: portrait) {
+        .header-container { /* Replace with the actual container class or ID */
+          padding-top: 0.5rem; /* Adjust this value to move the logo higher */
+          }
+        
+        .logo { /* Replace with the actual logo class or ID */
+          margin-top: 0; /* Ensure there’s no margin pushing it down */
+          position: relative; /* If necessary, adjust the positioning */
+          left: -10px; /* Move it closer to the left edge by decreasing this value */
+        }
+        .logo-container {
+          display: flex;
+          justify-content: flex-start; /* Aligns the logo to the start of the container */
+        }
+        .logo-container {
+          padding-left: 0; /* or adjust to a smaller value */
+          margin-left: -10px; /* or adjust to a smaller value */
+        }
+        .header, .cb-menu-logo {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start; /* This ensures alignment at the start */
+        }
+      }
+        
+      
+      @media (max-width: 768px), (orientation: portrait) {
+        .cb-navbar-strip {
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        .cb-navbar-grid {
+            justify-content: flex-start;
+        }
+
+        .cb-navbar-logo {
+            margin-left: 0;
+            padding-left: 0;
+            transform: translateX(-20px); /* Adjust as needed */
+        }
+      }
     </style>
   </head>
   <body>
@@ -3661,7 +3762,7 @@
             <div class="cb-menu-container">
               <div class="cb-menu-grid">
                 <div class="cb-menu-grid-col -right">
-                  <div class="cb-menu-title" style="font-size: 18px; padding-bottom: 15px; margin-bottom: 44px; transform: translateY(-0.65rem);">Menu</div>
+                  <div class="cb-menu-title" style="font-size: 18px; padding-bottom: 15px; margin-bottom: 44px; transform: translateY(-0.65rem);"> Menu</div>
                   <div
                     class="cb-menu-navs"
                     role="navigation"
