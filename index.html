@@ -1051,6 +1051,13 @@
         position: relative;
         transform: translateY(7%)
       }
+      @media (max-width: 992px) and (min-width: 768px) {
+        .cb-navbar-toggle {
+        top: 52%; /* Adjust the position for laptops */
+        transform: translateY(-52%);
+        }
+      }
+
       @media (min-width: 768px), (orientation: landscape) {
         .cb-navbar-toggle {
           display: inline-block;
