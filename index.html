@@ -986,6 +986,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
       }
       .cb-navbar-grid-col {
         pointer-events: auto;
@@ -994,6 +995,12 @@
       .cb-navbar-grid-col-left{
         width: 140px;
         height: 70px;
+      }
+      .cb-navbar-grid-col-right{
+        display: flex;
+        align-items: center; /* This will vertically align the items */
+        flex-grow: 1;
+        justify-content: flex-end;
       }
       .cb-navbar-logo {
         position: relative;
@@ -1039,7 +1046,10 @@
         }
       }
       .cb-navbar-toggle {
-        display: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        transform: translateY(5%)
       }
       @media (min-width: 768px), (orientation: landscape) {
         .cb-navbar-toggle {
