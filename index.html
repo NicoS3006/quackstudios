@@ -1045,12 +1045,18 @@
           letter-spacing: -0.03em;
         }
       }
-      .cb-navbar-toggle {
-        margin: 0;
-        padding: 0;
-        position: relative;
-        transform: translateY(10%)
+      @media (max-width: 767px) and (orientation: portrait) {
+        .cb-navbar-toggle {
+          display: inline-block;
+          margin: 0 50px 0 0;
+          font-size: 2rem;
+          letter-spacing: -0.03em;
+          text-transform: lowercase;
+          position: relative;
+          transform: translateY(-85%);
+        }
       }
+      
       @media (max-width: 992px) and (min-width: 768px), (orientation: landscape) {
         .cb-navbar-toggle {
           display: inline-block;
@@ -1095,29 +1101,17 @@
           position: relative;
         }
       }
-      @media (max-width: 1990px) and (min-width: 1741px), (orientation: landscape) {
+      @media (min-width: 1741px) and (max-width: 1999), (orientation: landscape) {
         .cb-navbar-toggle {
           display: inline-block;
           margin: 0 50px 0 0;
           font-size: 2rem;
           letter-spacing: -0.03em;
           text-transform: lowercase;
-          top: -3vh;
+          transform: translateY(30%);
           position: relative;
         }
       }
-      @media (max-width: 3000px) and (min-width: 2500px), (orientation: landscape) {
-        .cb-navbar-toggle {
-          display: inline-block;
-          margin: 0 50px 0 0;
-          font-size: 2rem;
-          letter-spacing: -0.03em;
-          text-transform: lowercase;
-          top: -2.5vh;
-          position: relative;
-        }
-      }
-
 
       .cb-loader {
         display: inline;
@@ -3757,21 +3751,16 @@
         }
       }
         
-      
       @media (max-width: 768px), (orientation: portrait) {
         .cb-navbar-strip {
             padding-left: 0;
             margin-left: 0;
         }
-
-        .cb-navbar-grid {
-            justify-content: flex-start;
-        }
-
         .cb-navbar-logo {
             margin-left: 0;
             padding-left: 0;
-            transform: translateX(-20px); /* Adjust as needed */
+            transform: translateX(-20%) translateY(-20%); /* Adjust as needed */
+            
         }
 
         .cb-outro-header h2 {
@@ -4732,7 +4721,7 @@
                   <div class="cb-overview-text">
                     <p>
                       In our team, developers work alongside designers, strategists
-                      and analysts. Monty Studios doesn't do cookie-cutter solutions
+                      and analysts. QuackStudios doesn't do cookie-cutter solutions
                       and we build products exactly as they were during the design phase,
                       no short cuts or simplifications.
                     </p>
