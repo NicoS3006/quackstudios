@@ -1049,13 +1049,7 @@
         margin: 0;
         padding: 0;
         position: relative;
-        transform: translateY(7%)
-      }
-      @media (max-width: 992px) and (min-width: 768px) {
-        .cb-navbar-toggle {
-        top: 52%; /* Adjust the position for laptops */
-        transform: translateY(-52%);
-        }
+        transform: translateY(10%)
       }
 
       @media (min-width: 768px), (orientation: landscape) {
@@ -1065,10 +1059,69 @@
           font-size: 2rem;
           letter-spacing: -0.03em;
           text-transform: lowercase;
-          top: -15px;
+          top: -1.8vh;
           position: relative;
         }
       }
+      
+      @media (max-width: 992px) and (min-width: 768px), (orientation: landscape) {
+        .cb-navbar-toggle {
+          display: inline-block;
+          margin: 0 50px 0 0;
+          font-size: 2rem;
+          letter-spacing: -0.03em;
+          text-transform: lowercase;
+          top: -2.4vh;
+          position: relative;
+        }
+      }
+      @media (max-width: 1024px) and (min-width: 768px), (orientation: landscape) {
+        .cb-navbar-toggle {
+          display: inline-block;
+          margin: 0 50px 0 0;
+          font-size: 2rem;
+          letter-spacing: -0.03em;
+          text-transform: lowercase;
+          top: -3vh;
+          position: relative;
+        }
+      }
+      @media (min-width: 1024px) and (max-width: 1440px), (orientation: landscape) {
+        .cb-navbar-toggle {
+          display: inline-block;
+          margin: 0 50px 0 0;
+          font-size: 2rem;
+          letter-spacing: -0.03em;
+          text-transform: lowercase;
+          top: -2.4vh;
+          position: relative;
+        }
+      }
+      @media (min-width: 1440px) and (max-width: 1740px), (orientation: landscape) {
+        .cb-navbar-toggle {
+          display: inline-block;
+          margin: 0 50px 0 0;
+          font-size: 2rem;
+          letter-spacing: -0.03em;
+          text-transform: lowercase;
+          top: -2.3vh;
+          position: relative;
+        }
+      }
+      @media (min-width: 1740px) and (max-width: 2040px), (orientation: landscape) {
+        .cb-navbar-toggle {
+          display: inline-block;
+          margin: 0 50px 0 0;
+          font-size: 2rem;
+          letter-spacing: -0.03em;
+          text-transform: lowercase;
+          top: -1.8vh;
+          position: relative;
+        }
+      }
+
+
+
       .cb-loader {
         display: inline;
       }
@@ -3838,7 +3891,7 @@
     </nav>
     <a
       class="cb-intouch"
-      href="https://quackstudios.com.au/contactus/"
+      href="https://quackstudios.com.au/contactus"
       data-cursor="-inverse"
       aria-label="Contact us"
       ><div class="cb-intouch-border">
