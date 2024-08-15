@@ -7454,24 +7454,20 @@
         window.addEventListener('load', function() {
         console.log('Hash at page load:', window.location.hash); // Log the current hash
 
-     if (window.location.hash === '#reload') { // Check for a specific hash
-        console.log('Reloading the page due to hash:', window.location.hash);
-
+     if (window.location.hash === '#reload') { 
+        console.log('Hash is #reload, will not reload again.');
         // Remove the hash to avoid reloading in a loop
         window.location.hash = ''; 
-
-        // Force a reload
-        location.reload();
-      } else if (!window.location.hash) { // Check if there's no hash
-        // Only set the hash if it's not already there
+        // Do not reload again, just clear the hash
+        } else if (!window.location.hash) {
+        console.log('No hash found, setting #reload and reloading...');
+        // Set the hash and reload once
         window.location.hash = '#reload';
-        console.log('Hash set to #reload, reloading page...');
         location.reload();
-       } else {
-        console.log('No hash found, not reloading.');
+        } else {
+        console.log('Different hash found:', window.location.hash, 'No reloading.');
      }
-      });
-
+     });
     </script>
 
     
