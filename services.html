@@ -7452,19 +7452,22 @@
         console.log('Script is running'); // This should appear as soon as the script runs
     
         window.addEventListener('load', function() {
-            console.log('Hash at page load:', window.location.hash);  // Log the current hash
-            
-            if (window.location.hash) {
-                console.log('Reloading the page due to hash:', window.location.hash);
-                window.location.hash = '';
-                location.reload();
-            }
+        console.log('Hash at page load:', window.location.hash);  // Log the current hash
+
+        if (window.location.hash) {
+            console.log('Reloading the page due to hash:', window.location.hash);
+
+            // Remove the hash to avoid reloading in a loop
+            window.location.hash = '';
+
+            // Force a reload
+            location.reload();
+        } else {
+            console.log('No hash found, not reloading.');
+        }
         });
     </script>
-    
-    
-   
-    
+
     
     <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
     <script src="montyweb.com.au/assets/js/bundle_v%3D5.3.13.js" async=""></script>
