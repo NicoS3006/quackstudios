@@ -7457,7 +7457,6 @@
      if (window.location.hash === '#reload') { 
         console.log('Hash is #reload, will not reload again.');
         // Remove the hash to avoid reloading in a loop
-        location.reload();
         window.location.hash = ''; 
         // Do not reload again, just clear the hash
         } else if (!window.location.hash) {
