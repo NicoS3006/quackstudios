@@ -7104,7 +7104,7 @@
                         </div>
                         <nav class="cb-navbar-menu-navs" data-cursor="-opaque">
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav"
-                                    href="/#reload"><span class="cb-btn_nav-title"><span
+                                    href="/index#reload"><span class="cb-btn_nav-title"><span
                                             data-text="Home">Home</span></span></a></div>
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav -underline"
                                     href="/services"><span class="cb-btn_nav-title"><span
@@ -7449,18 +7449,17 @@
     </main>
     
     <script>
-        window.addEventListener('load', function() {
-            if (window.location.hash === '#reload') {
-                console.log('Reloading the page');
-                
-                // Remove the hash to avoid reloading in a loop
-                window.location.hash = '';
-    
-                // Force a reload
-                location.reload();
-            }
-        });
+      window.addEventListener('load', function() {
+        console.log('Current hash:', window.location.hash);
+        if (window.location.hash === '#reload') {
+            console.log('Reloading the page');
+            
+            window.location.hash = '';
+            location.reload();
+        }
+      });
     </script>
+   
     
     
     <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
