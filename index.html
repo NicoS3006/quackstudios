@@ -4934,29 +4934,5 @@
           alt
         /></div
     ></noscript>
-
-    <script>
-      console.log('Script is running'); // This should appear as soon as the script runs
-
-      document.addEventListener('DOMContentLoaded', function() {
-       console.log('Hash at page load:', window.location.hash); // Log the current hash
-
-     if (window.location.hash === '#reload') {
-        console.log('Hash is #reload, will not reload again.');
-
-        // Remove the hash without leaving a trailing #
-        window.history.replaceState(null, null, window.location.pathname + window.location.search);
-        
-     } else if (window.location.hash === '') { // Only run if there is no hash at all
-        console.log('No hash found, setting #reload and reloading...');
-        
-        // Set the hash and reload once
-        window.location.hash = '#reload';
-        location.reload();
-     } else {
-        console.log('Different hash found:', window.location.hash, 'No reloading.');
-     }
-      });
-   </script>
   </body>
 </html>
