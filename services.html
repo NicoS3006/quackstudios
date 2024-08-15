@@ -7449,19 +7449,19 @@
     </main>
    
     <script>
-        window.addEventListener('load', function() {
-        if (window.location.hash) {  // Checks if any hash is present
-            console.log('Reloading the page due to hash:', window.location.hash);
-            
-            // Remove the hash to avoid reloading in a loop
-            window.location.hash = '';
-            
-            // Force a reload
-            location.reload();
-        }
-       });
+        console.log('Script is running'); // This should appear as soon as the script runs
     
+        window.addEventListener('load', function() {
+            console.log('Hash at page load:', window.location.hash);  // Log the current hash
+            
+            if (window.location.hash) {
+                console.log('Reloading the page due to hash:', window.location.hash);
+                window.location.hash = '';
+                location.reload();
+            }
+        });
     </script>
+    
     
    
     
