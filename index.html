@@ -4938,25 +4938,25 @@
     <script>
       console.log('Script is running'); // This should appear as soon as the script runs
 
-    window.addEventListener('load', function() {
-    console.log('Hash at page load:', window.location.hash); // Log the current hash
+     window.addEventListener('load', function() {
+      console.log('Hash at page load:', window.location.hash); // Log the current hash
 
-    if (window.location.hash === '#reload') {
+     if (window.location.hash === '#reload') {
         console.log('Hash is #reload, will not reload again.');
 
         // Remove the hash without leaving a trailing #
         window.history.replaceState(null, null, window.location.pathname + window.location.search);
         
-    } else if (!window.location.hash) {
+     } else if (!window.location.hash) {
         console.log('No hash found, setting #reload and reloading...');
         
         // Set the hash and reload once
         window.location.hash = '#reload';
         location.reload();
-    } else {
+     } else {
         console.log('Different hash found:', window.location.hash, 'No reloading.');
-    }
-});
+     }
+      });
 
    </script>
   </body>
