@@ -7449,25 +7449,29 @@
     </main>
    
     <script>
-        console.log('Script is running'); // This should appear as soon as the script runs
-    
+       console.log('Script is running'); // This should appear as soon as the script runs
+
         window.addEventListener('load', function() {
-        console.log('Hash at page load:', window.location.hash);  // Log the current hash
+        console.log('Hash at page load:', window.location.hash); // Log the current hash
 
-        if (window.location.hash) {
-            console.log('Reloading the page due to hash:', window.location.hash);
+     if (window.location.hash === '#reload') { // Check for a specific hash
+        console.log('Reloading the page due to hash:', window.location.hash);
 
-            // Remove the hash to avoid reloading in a loop
-            window.location.hash = '';
+        // Remove the hash to avoid reloading in a loop
+        window.location.hash = ''; 
 
-            // Force a reload
-            location.reload();
-        } else {
-            console.log('No hash found, not reloading.');
-        }
-        })
-        window.location.hash = '#reload';
+        // Force a reload
         location.reload();
+      } else if (!window.location.hash) { // Check if there's no hash
+        // Only set the hash if it's not already there
+        window.location.hash = '#reload';
+        console.log('Hash set to #reload, reloading page...');
+        location.reload();
+       } else {
+        console.log('No hash found, not reloading.');
+     }
+      });
+
     </script>
 
     
