@@ -7104,7 +7104,7 @@
                         </div>
                         <nav class="cb-navbar-menu-navs" data-cursor="-opaque">
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav"
-                                    href="/" onclick="location.reload()"><span class="cb-btn_nav-title"><span
+                                    href="/#reload"><span class="cb-btn_nav-title"><span
                                             data-text="Home">Home</span></span></a></div>
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav -underline"
                                     href="/services"><span class="cb-btn_nav-title"><span
@@ -7447,6 +7447,19 @@
             </div>
         </footer>
     </main>
+    
+    <script>
+        window.addEventListener('load', function() {
+            if (window.location.hash === '#reload') {
+                // Remove the hash to avoid reloading in a loop
+                window.location.hash = '';
+    
+                // Force a reload
+                location.reload();
+            }
+        });
+    </script>
+    
     <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
     <script src="montyweb.com.au/assets/js/bundle_v%3D5.3.13.js" async=""></script>
     <script>(function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date; for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return } } k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://mc.webvisor.org/metrika/tag_ww.js", "ym"); ym(window.ymID = 22519915, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });</script>
