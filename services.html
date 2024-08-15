@@ -7451,6 +7451,8 @@
     <script>
         window.addEventListener('load', function() {
             if (window.location.hash === '#reload') {
+                console.log('Reloading the page');
+                
                 // Remove the hash to avoid reloading in a loop
                 window.location.hash = '';
     
@@ -7459,6 +7461,7 @@
             }
         });
     </script>
+    
     
     <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
     <script src="montyweb.com.au/assets/js/bundle_v%3D5.3.13.js" async=""></script>
