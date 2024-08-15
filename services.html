@@ -7447,18 +7447,22 @@
             </div>
         </footer>
     </main>
-    
+   
     <script>
-      window.addEventListener('load', function() {
-        console.log('Current hash:', window.location.hash);
-        if (window.location.hash === '#reload') {
-            console.log('Reloading the page');
+        window.addEventListener('load', function() {
+        if (window.location.hash) {  // Checks if any hash is present
+            console.log('Reloading the page due to hash:', window.location.hash);
             
+            // Remove the hash to avoid reloading in a loop
             window.location.hash = '';
+            
+            // Force a reload
             location.reload();
         }
-      });
+       });
+    
     </script>
+    
    
     
     
