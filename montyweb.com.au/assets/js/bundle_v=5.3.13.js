@@ -32666,16 +32666,52 @@
             if (
               "interactive" === document.readyState ||
               "complete" === document.readyState
-            )
-              return Promise.resolve(e.start()).then(function () {});
-            document.addEventListener("DOMContentLoaded", () => e.start(), {
-              once: !0,
-            });
+            ) {
+                // Call e.start() immediately if the document is ready
+                return Promise.resolve(e.start()).then(function () {
+                  // Remove the old reCAPTCHA script if it exists
+                  const oldRecaptchaScript = document.querySelector('script[src="https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/recaptcha__en_gb.js"]');
+                  if (oldRecaptchaScript) {
+                      oldRecaptchaScript.parentNode.removeChild(oldRecaptchaScript);
+                  }
+
+                  // Optionally, inject your own reCAPTCHA script
+                  const newRecaptchaScript = document.createElement('script');
+                  newRecaptchaScript.src = 'https://www.google.com/recaptcha/api.js?render=6Lc3_CcqAAAAABI41t0IzV2pfAKEd4HxQcKezADz';
+                  newRecaptchaScript.async = true;
+                  document.body.appendChild(newRecaptchaScript);
+
+                  console.log('e.start() executed immediately, and scripts handled.');
+              });
+            }
+            // Add an event listener to start when the DOM is fully loaded
+            document.addEventListener("DOMContentLoaded", () => {
+              e.start();
+
+              // Remove the old reCAPTCHA script if it exists
+              const oldRecaptchaScript = document.querySelector('script[src="https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/recaptcha__en_gb.js"]');
+              if (oldRecaptchaScript) {
+                  oldRecaptchaScript.parentNode.removeChild(oldRecaptchaScript);
+              }
+
+              // Inject your new reCAPTCHA script
+              const newRecaptchaScript = document.createElement('script');
+              newRecaptchaScript.src = 'https://www.google.com/recaptcha/api.js?render=6Lc3_CcqAAAAABI41t0IzV2pfAKEd4HxQcKezADz';
+              newRecaptchaScript.async = true;
+              document.body.appendChild(newRecaptchaScript);
+
+              console.log('e.start() executed after DOMContentLoaded event, and scripts handled.');
+          }, {
+              once: true, // Ensure the event listener is only executed once
+          });
           })();
-        return Promise.resolve(t && t.then ? t.then(function () {}) : void 0);
-      } catch (e) {
-        return Promise.reject(e);
-      }
+          // Return a promise that waits for the `t` promise to resolve, if applicable
+          return Promise.resolve(t && t.then ? t.then(function () {}) : void 0);
+        } catch (e) {
+            // Catch any errors and return a rejected promise
+            console.error('Error during init():', e);
+            return Promise.reject(e);
+        }
     }
     start() {
       try {
