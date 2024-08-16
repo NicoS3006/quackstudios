@@ -1,3 +1,4 @@
+/*! For license information please see bundle.js.LICENSE.txt */
 (() => {
   "use strict";
   function e() {
@@ -15427,11 +15428,21 @@
         (this.flipY = e.flipY),
         (this.unpackAlignment = e.unpackAlignment),
         (this.colorSpace = e.colorSpace),
-        (this.userData = JSON.parse(JSON.stringify(e.userData))),
-        (this.needsUpdate = !0),
-        this
-      );
-    }
+        // Add try-catch block around the JSON.parse call
+        (function() {
+          try {
+              this.userData = JSON.parse(JSON.stringify(e.userData));
+          } catch (error) {
+              console.error('JSON parsing error:', error.message);
+              console.log('Invalid JSON:', e.userData);
+              this.userData = {}; // Optionally set a default value if JSON parsing fails
+          }
+      }).call(this),
+
+      (this.needsUpdate = !0),
+      this
+    );
+  }
     toJSON(e) {
       const t = void 0 === e || "string" == typeof e;
       if (!t && void 0 !== e.textures[this.uuid]) return e.textures[this.uuid];
@@ -32666,16 +32677,52 @@
             if (
               "interactive" === document.readyState ||
               "complete" === document.readyState
-            )
-              return Promise.resolve(e.start()).then(function () {});
-            document.addEventListener("DOMContentLoaded", () => e.start(), {
-              once: !0,
-            });
+            ) {
+                // Call e.start() immediately if the document is ready
+                return Promise.resolve(e.start()).then(function () {
+                  // Remove the old reCAPTCHA script if it exists
+                  const oldRecaptchaScript = document.querySelector('script[src="https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/recaptcha__en_gb.js"]');
+                  if (oldRecaptchaScript) {
+                      oldRecaptchaScript.parentNode.removeChild(oldRecaptchaScript);
+                  }
+
+                  // Optionally, inject your own reCAPTCHA script
+                  const newRecaptchaScript = document.createElement('script');
+                  newRecaptchaScript.src = 'https://www.google.com/recaptcha/api.js?render=6Lc3_CcqAAAAABI41t0IzV2pfAKEd4HxQcKezADz';
+                  newRecaptchaScript.async = true;
+                  document.body.appendChild(newRecaptchaScript);
+
+                  console.log('e.start() executed immediately, and scripts handled.');
+              });
+            }
+            // Add an event listener to start when the DOM is fully loaded
+            document.addEventListener("DOMContentLoaded", () => {
+              e.start();
+
+              // Remove the old reCAPTCHA script if it exists
+              const oldRecaptchaScript = document.querySelector('script[src="https://www.gstatic.com/recaptcha/releases/hfUfsXWZFeg83qqxrK27GB8P/recaptcha__en_gb.js"]');
+              if (oldRecaptchaScript) {
+                  oldRecaptchaScript.parentNode.removeChild(oldRecaptchaScript);
+              }
+
+              // Inject your new reCAPTCHA script
+              const newRecaptchaScript = document.createElement('script');
+              newRecaptchaScript.src = 'https://www.google.com/recaptcha/api.js?render=6Lc3_CcqAAAAABI41t0IzV2pfAKEd4HxQcKezADz';
+              newRecaptchaScript.async = true;
+              document.body.appendChild(newRecaptchaScript);
+
+              console.log('e.start() executed after DOMContentLoaded event, and scripts handled.');
+          }, {
+              once: true, // Ensure the event listener is only executed once
+          });
           })();
-        return Promise.resolve(t && t.then ? t.then(function () {}) : void 0);
-      } catch (e) {
-        return Promise.reject(e);
-      }
+          // Return a promise that waits for the `t` promise to resolve, if applicable
+          return Promise.resolve(t && t.then ? t.then(function () {}) : void 0);
+        } catch (e) {
+            // Catch any errors and return a rejected promise
+            console.error('Error during init():', e);
+            return Promise.reject(e);
+        }
     }
     start() {
       try {
