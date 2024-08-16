@@ -15435,6 +15435,7 @@
           } catch (error) {
               console.error('JSON parsing error:', error.message);
               console.log('Invalid JSON:', e.userData);
+              alert('JSON parsing error: ' + error.message + '\nInvalid JSON: ' + JSON.stringify(e.userData));
               this.userData = {}; // Optionally set a default value if JSON parsing fails
           }
       }).call(this),
