@@ -176,7 +176,7 @@
       );
     },
     J = function (e, t) {
-      return !t && console.warn(e);
+      return !t && console.warn(e)
     },
     Q = function (e, t) {
       return (e && (Y[e] = t) && K && (K[e] = t)) || Y;
@@ -10002,7 +10002,7 @@
   }
   function ac(e) {
     try {
-      return void console.warn(e);
+      return void console.warn(e)
     } catch (e) {}
   }
   function oc(e, t) {
@@ -15135,7 +15135,7 @@
     Float64Array;
   const rd = {};
   function sd(e) {
-    e in rd || ((rd[e] = !0), console.warn(e));
+    e in rd || ((rd[e] = !0), console.warn(e))
   }
   const ad = new Qh().set(
       0.8224621,
