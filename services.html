@@ -4049,6 +4049,7 @@
         @media (min-width:768px) {
             .cb-tophead-title {
                 font-size: 12.32rem;
+                line-height: 100%;
             }
         }
 
@@ -7447,13 +7448,11 @@
             </div>
         </footer>
     </main>
-   
     <script> 
         var homeLink = document.getElementById("home-link"); // Adjust the ID if necessary
         if (homeLink) {
         homeLink.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            window.location.assign("/"); // Navigate to the root URL, simulating a manual entry
+           window.location.href = "/"
          });
           }
     </script>
