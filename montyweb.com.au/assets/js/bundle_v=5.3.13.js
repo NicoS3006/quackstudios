@@ -8306,14 +8306,13 @@
           e = this.limit;
         else {
           let i;
-          if (
-            ("string" == typeof e
-              ? (i = document.querySelector(e))
+          if ("string" == typeof e
+              ? i = document.querySelector(e)
               : e instanceof HTMLElement &&
                 (null == e ? void 0 : e.nodeType) &&
                 (i = e),
             i)
-          ) {
+           {
             if (this.options.wrapper !== window) {
               const e = this.rootElement.getBoundingClientRect();
               t -= this.isHorizontal ? e.left : e.top;
@@ -12875,7 +12874,7 @@
       const t = this;
       if (t.mounted) return !0;
       let i = e || t.params.el;
-      if (("string" == typeof i && (i = document.querySelector(i)), !i))
+      if ("string" == typeof i && (i = document.querySelector(i)), !i)
         return !1;
       (i.swiper = t),
         i.parentNode &&
