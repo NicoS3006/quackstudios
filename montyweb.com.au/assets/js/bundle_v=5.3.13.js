@@ -33619,7 +33619,7 @@
               (this.input = this.el.querySelector("input, textarea")),
               (this.isTextarea =
                 "TEXTAREA" === (null == (e = this.input) ? void 0 : e.tagName)),
-              (this.validityMsg = JSON.parse(null != ("t = this.el.dataset.validityMsg") ? t : "null")),
+                this.validityMsg = this.el.dataset.validityMsg ? JSON.parse(this.el.dataset.validityMsg) : null;
               (this.message = this.el.querySelector(".cb-input_light-message")),
               this.bindInput(),
               this.isTextarea && this.bindAutosize();
