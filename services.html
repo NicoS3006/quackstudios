@@ -7450,14 +7450,15 @@
    
     <script> 
         document.addEventListener('DOMContentLoaded', function() {
-            var homeLink = document.querySelector('a[href="/"]');
+            var homeLink = document.getElementById('home-link'); 
             if (homeLink) {
                 homeLink.addEventListener('click', function(event) {
                     event.preventDefault();
-                    location.reload();
+                    location.reload(true); // Force a reload
                 });
             }
-        });
+         });
+    </script>
     </script>
     <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
     <script src="montyweb.com.au/assets/js/bundle_v%3D5.3.13.js" async=""></script>
