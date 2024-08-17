@@ -33625,12 +33625,12 @@
                     try {
                         this.validityMsg = JSON.parse(validityMsg);
                     } catch (error) {
-                        console.error('JSON parsing error:', error.message);
-                        console.log('Invalid JSON:', validityMsg);
+                        //console.error('JSON parsing error:', error.message);
+                        //console.log('Invalid JSON:', validityMsg);
                         this.validityMsg = {}; // Default to an empty object or handle as needed
                     }
                 } else {
-                    console.warn('Validity Message is undefined or empty.');
+                    //console.warn('Validity Message is undefined or empty.');
                     this.validityMsg = null; // Or set a default value
                 }
               (this.message = this.el.querySelector(".cb-input_light-message")),
