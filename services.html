@@ -7104,7 +7104,7 @@
                         </div>
                         <nav class="cb-navbar-menu-navs" data-cursor="-opaque">
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav"
-                                    href="/"><span class="cb-btn_nav-title"><span
+                                    href="/" id="home-link"><span class="cb-btn_nav-title"><span
                                             data-text="Home">Home</span></span></a></div>
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav -underline"
                                     href="/services"><span class="cb-btn_nav-title"><span
@@ -7448,7 +7448,17 @@
         </footer>
     </main>
    
-    
+    <script> 
+        document.addEventListener('DOMContentLoaded', function() {
+        var homeLink = document.querySelector('a[href="/home"]');
+        if (homeLink) {
+            homeLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                location.reload();
+            });
+        }
+        });
+    </script>
     <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
     <script src="montyweb.com.au/assets/js/bundle_v%3D5.3.13.js" async=""></script>
     <script>(function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date; for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return } } k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://mc.webvisor.org/metrika/tag_ww.js", "ym"); ym(window.ymID = 22519915, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });</script>
@@ -7456,5 +7466,4 @@
         <div><img src="https://mc.webvisor.org/watch/22519915" style="position:absolute; left:-9999px;"></div>
     </noscript>
 </body>
-
 </html>
