@@ -33672,9 +33672,17 @@
               this.validity = (() => {
                   try {
                     let validityStr = null != (e = this.el.dataset.validity) ? e : null;
-                    return validityStr ? JSON.parse(validityStr) : null;
+                    console.log('Raw Validity Data:', validityStr);  // Log the raw data
+                    if (validityStr) {
+                      let parsedValidity = JSON.parse(validityStr);
+                      console.log('Parsed Validity Data:', parsedValidity);  // Log the parsed data
+                      return parsedValidity;
+                    } else {
+                      console.warn('Validity string is null or undefined.');
+                      return null;
+                    }
                   } catch (error) {
-                    console.log('Raw Validity Data:', this.el.dataset.validity);
+                    console.error('Invalid JSON for validity:', error.message);
                     return null; // Or return an empty object {}
                   }
               })();
