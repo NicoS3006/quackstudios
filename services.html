@@ -7449,15 +7449,19 @@
     </main>
    
     <script> 
-        document.addEventListener('DOMContentLoaded', function() {
-         var homeLink = document.querySelector('a[href="/"]'); // Adjust href to match your home link's href
-        if (homeLink) {
+       document.addEventListener('DOMContentLoaded', function() {
+            var homeLink = document.querySelector('a[href="/"]'); // Adjust this if your home URL is different
+            if (homeLink) {
+                homeLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.replace("/"); // Use replace to navigate and remove current page from history
+                });
+            }
             homeLink.addEventListener('click', function(event) {
             event.preventDefault();
-            window.location.href = "/"; // Change this to the correct home URL
-            window.location.reload(true); // Force reload after redirect
-        });
-        }
+            alert("Home link clicked, redirecting...");
+            window.location.replace("/");
+            });
         });
     </script>
     </script>
