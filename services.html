@@ -7454,13 +7454,13 @@
             if (homeLink) {
                 homeLink.addEventListener('click', function(event) {
                     event.preventDefault();
-                    window.location.replace("/"); // Use replace to navigate and remove current page from history
+                    window.location.href = '/'; // Use replace to navigate and remove current page from history
                 });
             }
             homeLink.addEventListener('click', function(event) {
             event.preventDefault();
             alert("Home link clicked, redirecting...");
-            window.location.replace("/");
+            window.location.href = '/';
             });
         });
     </script>
