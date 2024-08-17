@@ -181,7 +181,7 @@
         return false;
       }
       console.log("GSAP target found:", e);
-      return !!e && console.warn(e);
+      return true;
     },
     Q = function (e, t) {
       return (e && (Y[e] = t) && K && (K[e] = t)) || Y;
