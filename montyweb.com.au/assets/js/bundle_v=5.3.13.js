@@ -33669,12 +33669,24 @@
               (this.files = []),
               (this.overallSize = 0),
               (this.error = !1),
-              (this.validity = JSON.parse(
-                null != (e = this.el.dataset.validity) ? e : "null"
-              )),
-              (this.validityMsg = JSON.parse(
-                null != (t = this.el.dataset.validityMsg) ? t : "null"
-              )),
+              this.validity = (() => {
+                  try {
+                    let validityStr = null != (e = this.el.dataset.validity) ? e : null;
+                    return validityStr ? JSON.parse(validityStr) : null;
+                  } catch (error) {
+                    console.error('Invalid JSON for validity:', error.message);
+                    return null; // Or return an empty object {}
+                  }
+              })();
+              this.validityMsg = (() => {
+                try {
+                let validityMsgStr = null != (t = this.el.dataset.validityMsg) ? t : null;
+                return validityMsgStr ? JSON.parse(validityMsgStr) : null;
+              } catch (error) {
+                console.error('Invalid JSON for validityMsg:', error.message);
+                return null; // Or return an empty object {}
+            }
+          })();
               (this.input = this.el.querySelector("[type=file]")),
               (this.isMultiple = !!this.input.multiple),
               (this.btn = this.el.querySelector(".cb-input_file-btn")),
