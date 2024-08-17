@@ -180,6 +180,7 @@
         console.warn("GSAP target not found:", t);
         return false;
       }
+      console.log("GSAP target found:", e);
       return !!e && console.warn(e);
     },
     Q = function (e, t) {
