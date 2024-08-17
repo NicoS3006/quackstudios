@@ -33673,12 +33673,12 @@
                   try {
                     let validityStr = null != (e = this.el.dataset.validity) ? e : null;
                     console.log('Raw Validity Data:', validityStr);  // Log the raw data
-                    if (validityStr) {
+                    if (validityStr && validityStr.trim().startsWith('{') && validityStr.trim().endsWith('}')) {
                       let parsedValidity = JSON.parse(validityStr);
-                      console.log('Parsed Validity Data:', parsedValidity);  // Log the parsed data
+                      console.log('Parsed Validity Data:', parsedValidity);
                       return parsedValidity;
                     } else {
-                      console.warn('Validity string is null or undefined.');
+                      console.warn('Validity data is not a valid JSON object. It may be null, undefined, or improperly formatted:', validityStr);
                       return null;
                     }
                   } catch (error) {
@@ -33689,10 +33689,18 @@
               this.validityMsg = (() => {
                 try {
                 let validityMsgStr = null != (t = this.el.dataset.validityMsg) ? t : null;
-                return validityMsgStr ? JSON.parse(validityMsgStr) : null;
+                console.log('Raw ValidityMsg Data:', validityMsgStr);
+                if (validityMsgStr && validityMsgStr.trim().startsWith('{') && validityMsgStr.trim().endsWith('}')) {
+                  let parsedValidityMsg = JSON.parse(validityMsgStr);
+                  console.log('Parsed ValidityMsg Data:', parsedValidityMsg);
+                  return parsedValidityMsg;
+                } else {
+                  console.warn('ValidityMsg data is not a valid JSON object. It may be null, undefined, or improperly formatted:', validityMsgStr);
+                  return null;
+                }
               } catch (error) {
-                console.log('Raw ValidityMsg Data:', this.el.dataset.validityMsg);
-                return null; // Or return an empty object {}
+                console.error('Invalid JSON for validityMsg:', error.message);
+                return null;
             }
           })();
               (this.input = this.el.querySelector("[type=file]")),
