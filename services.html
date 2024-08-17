@@ -7450,12 +7450,14 @@
    
     <script> 
         document.addEventListener('DOMContentLoaded', function() {
-        var homeLink = document.querySelector('a[href="/home"]');
+            // Select the navigation link that points to the homepage
+        var homeLink = document.querySelector('a[href="/"]'); // Replace '/home' with the correct path to your homepage
+    
         if (homeLink) {
-            homeLink.addEventListener('click', function(event) {
-                event.preventDefault();
-                location.reload();
-            });
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent the default action (which would be navigating to the homepage)
+            window.location.href = "/";  // Explicitly set the location to the homepage and reloads it
+        });
         }
         });
     </script>
