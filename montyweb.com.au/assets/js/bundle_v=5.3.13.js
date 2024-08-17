@@ -176,7 +176,11 @@
       );
     },
     J = function (e, t) {
-      return !t && console.warn(e)
+      if (!e) {
+        console.warn("GSAP target not found:", t);
+        return false;
+      }
+      return !!e && console.warn(e);
     },
     Q = function (e, t) {
       return (e && (Y[e] = t) && K && (K[e] = t)) || Y;
