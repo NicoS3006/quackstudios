@@ -33674,7 +33674,7 @@
                     let validityStr = null != (e = this.el.dataset.validity) ? e : null;
                     return validityStr ? JSON.parse(validityStr) : null;
                   } catch (error) {
-                    console.error('Invalid JSON for validity:', error.message);
+                    console.log('Raw Validity Data:', this.el.dataset.validity);
                     return null; // Or return an empty object {}
                   }
               })();
@@ -33683,7 +33683,7 @@
                 let validityMsgStr = null != (t = this.el.dataset.validityMsg) ? t : null;
                 return validityMsgStr ? JSON.parse(validityMsgStr) : null;
               } catch (error) {
-                console.error('Invalid JSON for validityMsg:', error.message);
+                console.log('Raw ValidityMsg Data:', this.el.dataset.validityMsg);
                 return null; // Or return an empty object {}
             }
           })();
