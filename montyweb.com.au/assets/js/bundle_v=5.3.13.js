@@ -235,7 +235,10 @@
       );
     },
     ye = function (e, t) {
-      for (var i = t.length, n = 0; e.indexOf(t[n]) < 0 && ++n < i; );
+      var i = t.length, n = 0;
+      var eString = typeof e === 'string' ? e : String(e); // Ensure e is a string
+
+      for (var i = t.length, n = 0; eString.indexOf(t[n]) < 0 && n < i; n++); // Now this should work
       return n < i;
     },
     xe = function () {
