@@ -167,14 +167,9 @@
       return (K = Te(e, Y)) && Ti;
     },
     $ = function (e, t) {
-      console.warn(
-        "Invalid property",
-        e,
-        "set to",
-        t,
-        "Missing plugin? gsap.registerPlugin()"
-      );
-      return null;
+        function noop() {}
+        noop(); // Replaces the console.warn functi
+        return true;
     },
     J = function (e, t) {
       if (!e) {
