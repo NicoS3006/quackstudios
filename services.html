@@ -7450,11 +7450,11 @@
    
     <script> 
         document.addEventListener('DOMContentLoaded', function() {
-         var homeLink = document.querySelector('a[href="/home"]'); // Adjust href to match your home link's href
+         var homeLink = document.querySelector('a[href="/"]'); // Adjust href to match your home link's href
         if (homeLink) {
-        homeLink.addEventListener('click', function(event) {
+            homeLink.addEventListener('click', function(event) {
             event.preventDefault();
-            window.location.href = "/home"; // Change this to the correct home URL
+            window.location.href = "/"; // Change this to the correct home URL
             window.location.reload(true); // Force reload after redirect
         });
         }
