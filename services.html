@@ -7450,14 +7450,15 @@
    
     <script> 
         document.addEventListener('DOMContentLoaded', function() {
-            var homeLink = document.getElementById('home-link'); 
-            if (homeLink) {
-                homeLink.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    location.reload(true); // Force a reload
-                });
-            }
-         });
+         var homeLink = document.querySelector('a[href="/home"]'); // Adjust href to match your home link's href
+        if (homeLink) {
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = "/home"; // Change this to the correct home URL
+            window.location.reload(true); // Force reload after redirect
+        });
+        }
+        });
     </script>
     </script>
     <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
