@@ -33619,23 +33619,16 @@
               (this.input = this.el.querySelector("input, textarea")),
               (this.isTextarea =
                 "TEXTAREA" === (null == (e = this.input) ? void 0 : e.tagName)),
-                console.log('Validity Message:', this.el.dataset.validityMsg);
-                let validityMsg = this.el.dataset.validityMsg;
-                if (validityMsg && validityMsg !== '{}') {
-                    try {
-                        this.validityMsg = JSON.parse(validityMsg);
-                    } catch (error) {
-                        //console.error('JSON parsing error:', error.message);
-                        //console.log('Invalid JSON:', validityMsg);
-                        this.validityMsg = {}; // Default to an empty object or handle as needed
-                    }
-                } else {
-                    //console.warn('Validity Message is undefined or empty.');
-                    this.validityMsg = null; // Or set a default value
+                this.validityMsg = (() => {
+                  try {
+                    return JSON.parse(this.el.dataset.validityMsg || '{}');
+                } catch {
+                    return {}; // Default to an empty object if JSON parsing fails
                 }
-              (this.message = this.el.querySelector(".cb-input_light-message")),
-              this.bindInput(),
-              this.isTextarea && this.bindAutosize();
+            })();
+            (this.message = this.el.querySelector(".cb-input_light-message")),
+            this.bindInput(),
+            this.isTextarea && this.bindAutosize();
           }
           bindInput() {
             this.input &&
