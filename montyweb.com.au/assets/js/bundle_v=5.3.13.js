@@ -1,37 +1,37 @@
 function loadScript(url) {
+  const existingScript = document.getElementById('dynamic-script');
+
+  // Check if the correct script is already loaded
+  if (existingScript && existingScript.src.includes(url)) {
+    return; // Script is already loaded, no need to reload
+  }
+
+  // If a script is already loaded, unload it
+  if (existingScript) {
+    existingScript.remove();
+  }
+
+  // Load the new script
   const script = document.createElement('script');
   script.src = url;
   script.id = 'dynamic-script';
   document.head.appendChild(script);
 }
 
-function unloadScript() {
-  const script = document.getElementById('dynamic-script');
-  if (script) {
-    script.remove();
-  }
-}
-
 function handleRouteChange() {
-  unloadScript();
-
   const path = window.location.pathname;
 
+  // Load the correct script based on the current path
   if (path === '/' || path === '/index.html') {
-    // Force a full reload for the home page
-    window.location.href = '/';
-    window.location.reload();  // Forces the browser to fully reload the page
+    loadScript('/path/to/bundle_v=0.2.0.js'); // Replace with the actual path
   } else if (path === '/services' || path === '/about' || path === '/contact') {
-    // Force a full reload for other pages
-    window.location.href = path;
-    window.location.reload();  // Forces the browser to fully reload the page
+    loadScript('/path/to/bundle_v=5.3.13.js'); // Replace with the actual path
   }
 }
+
 // Ensure this runs on page load and when navigating using the back/forward buttons
 window.addEventListener('popstate', handleRouteChange);
 window.addEventListener('load', handleRouteChange);
-
-handleRouteChange();
 
 (() => {
   "use strict";
