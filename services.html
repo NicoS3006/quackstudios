@@ -7456,31 +7456,6 @@
          });
           }
     </script>
-    <script>
-        function loadScript(url) {
-        const script = document.createElement('script');
-        script.src = url;
-        script.id = 'dynamic-script';
-        document.head.appendChild(script);
-      }
-      
-      function unloadScript() {
-        const script = document.getElementById('dynamic-script');
-        if (script) {
-          script.remove();
-        }
-      }
-      
-      // Example: Switch scripts based on route
-      function handleRouteChange() {
-        unloadScript();
-        if (window.location.pathname === '/') {
-          loadScript('montyweb.com.au/assets/js/bundle_v=0.2.0.js');
-        } 
-      }
-      
-      window.addEventListener('popstate', handleRouteChange);
-    </script>
     </script>
     <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
     <script src="montyweb.com.au/assets/js/bundle_v%3D5.3.13.js" async=""></script>
