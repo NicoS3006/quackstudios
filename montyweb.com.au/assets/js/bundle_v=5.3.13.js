@@ -1,48 +1,58 @@
-function loadScript(url, id) {
-  // Unload existing script if it's not the one needed
-  const existingScript = document.getElementById(id);
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof gsap !== 'undefined') {
+    console.log('GSAP is ready');
+    
+    // Now that GSAP is confirmed to be ready, execute the main logic
+    function loadScript(url, id) {
+      const existingScript = document.getElementById(id);
 
-  if (existingScript) {
-    console.log(`Script ${url} is already loaded.`);
-    return;  // Exit if the correct script is already loaded
-  }
+      if (existingScript) {
+        console.log(`Script ${url} is already loaded.`);
+        return;  // Exit if the correct script is already loaded
+      }
 
-  unloadScript();  // Remove any existing dynamic script
+      unloadScript();  // Remove any existing dynamic script
 
-  // Load the new script
-  const script = document.createElement('script');
-  script.src = url;
-  script.id = id;
-  document.head.appendChild(script);
-  console.log(`Loaded script: ${url}`);
-}
+      // Load the new script
+      const script = document.createElement('script');
+      script.src = url;
+      script.id = id;
+      document.head.appendChild(script);
+      console.log(`Loaded script: ${url}`);
+    }
 
-function unloadScript() {
-  const script = document.getElementById('dynamic-script');
-  if (script) {
-    script.remove();
-    console.log(`Unloaded script: ${script.src}`);
-  }
-}
+    function unloadScript() {
+      const script = document.getElementById('dynamic-script');
+      if (script) {
+        script.remove();
+        console.log(`Unloaded script: ${script.src}`);
+      }
+    }
 
-function handleRouteChange() {
-  const path = window.location.pathname || '/';
+    function handleRouteChange() {
+      const path = window.location.pathname || '/';
 
-  console.log('Current Path:', path);
+      console.log('Current Path:', path);
 
-  if (path === '/' || path === '/index.html') {
-    loadScript('/path/to/bundle_v=0.2.0.js', 'home-script');  // Replace with actual path
-  } else if (path === '/services' || path === '/about' || path === '/contact') {
-    loadScript('/path/to/bundle_v=5.3.13.js', 'other-script');  // Replace with actual path
+      if (path === '/' || path === '/index.html') {
+        loadScript('/path/to/bundle_v=0.2.0.js', 'home-script');  // Replace with the actual path
+      } else if (path === '/services' || path === '/about' || path === '/contact' || path === '/company') {
+        loadScript('/path/to/bundle_v=5.3.13.js', 'other-script');  // Replace with the actual path
+      } else {
+        console.log('No matching path found, no script loaded.');
+      }
+    }
+
+    window.addEventListener('popstate', handleRouteChange);
+    window.addEventListener('load', handleRouteChange);
+
+    handleRouteChange();  // Ensure it runs initially
+
   } else {
-    console.log('No matching path found, no script loaded.');
+    console.error('GSAP is not loaded. Script execution aborted.');
   }
-}
+});
 
-window.addEventListener('popstate', handleRouteChange);
-window.addEventListener('load', handleRouteChange);
-
-handleRouteChange();  // Ensure it runs initially
 
 
 (() => {
