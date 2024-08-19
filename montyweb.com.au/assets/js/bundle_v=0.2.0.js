@@ -18,14 +18,21 @@ function handleRouteChange() {
   const path = window.location.pathname;
 
   if (path === '/' || path === '/index.html') {
-    loadScript('/path/to/bundle_v=0.2.0.js');  // Replace with the correct path
+    // Force a full reload for the home page
+    window.location.href = '/';
+    window.location.reload();  // Forces the browser to fully reload the page
   } else if (path === '/services' || path === '/about' || path === '/contact') {
-    loadScript('/path/to/bundle_v=5.3.13.js');  // Replace with the correct path
+    // Force a full reload for other pages
+    window.location.href = path;
+    window.location.reload();  // Forces the browser to fully reload the page
   }
 }
 // Ensure this runs on page load and when navigating using the back/forward buttons
 window.addEventListener('popstate', handleRouteChange);
 window.addEventListener('load', handleRouteChange);
+
+handleRouteChange();
+
 (() => {
   "use strict";
   function t() {
