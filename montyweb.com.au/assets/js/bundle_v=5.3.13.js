@@ -200,6 +200,7 @@
       var t,
         i,
         n = e[0];
+        console.log('n:', n);
       if ((F(n) || L(n) || (e = [e]), !(t = (n._gsap || {}).harness))) {
         for (i = ue.length; i-- && !ue[i].targetTest(n); );
         t = ue[i];
@@ -228,7 +229,7 @@
     },
     _e = function (e, t) {
       var i = t.charAt(0),
-        n = parseFloat(t.substr(2));
+        n = parseFloat(t.substr(2)); 
       return (
         (e = parseFloat(e)),
         "+" === i ? e + n : "-" === i ? e - n : "*" === i ? e * n : e / n
