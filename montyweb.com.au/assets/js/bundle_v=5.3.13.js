@@ -200,7 +200,6 @@
       var t,
         i,
         n = e[0];
-        console.log('n:', n);
       if ((F(n) || L(n) || (e = [e]), !(t = (n._gsap || {}).harness))) {
         for (i = ue.length; i-- && !ue[i].targetTest(n); );
         t = ue[i];
