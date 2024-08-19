@@ -26,6 +26,9 @@ function handleRouteChange() {
 // Ensure this runs on page load and when navigating using the back/forward buttons
 window.addEventListener('popstate', handleRouteChange);
 window.addEventListener('load', handleRouteChange);
+
+handleRouteChange();
+
 (() => {
   "use strict";
   function e() {
