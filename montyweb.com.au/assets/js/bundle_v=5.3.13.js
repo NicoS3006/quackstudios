@@ -1,4 +1,31 @@
-/*! For license information please see bundle.js.LICENSE.txt */
+function loadScript(url) {
+  const script = document.createElement('script');
+  script.src = url;
+  script.id = 'dynamic-script';
+  document.head.appendChild(script);
+}
+
+function unloadScript() {
+  const script = document.getElementById('dynamic-script');
+  if (script) {
+    script.remove();
+  }
+}
+
+function handleRouteChange() {
+  unloadScript();
+
+  const path = window.location.pathname;
+
+  if (path === '/' || path === '/index.html') {
+    loadScript('/path/to/bundle_v=0.2.0.js');  // Replace with the correct path
+  } else if (path === '/services' || path === '/about' || path === '/contact') {
+    loadScript('/path/to/bundle_v=5.3.13.js');  // Replace with the correct path
+  }
+}
+// Ensure this runs on page load and when navigating using the back/forward buttons
+window.addEventListener('popstate', handleRouteChange);
+window.addEventListener('load', handleRouteChange);
 (() => {
   "use strict";
   function e() {
