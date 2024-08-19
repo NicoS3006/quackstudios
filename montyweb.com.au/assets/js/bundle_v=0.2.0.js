@@ -1,52 +1,45 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // Proceed with your script logic without checking for GSAP
-  // Your GSAP-related code here
+function loadScript(url, id) {
+  const existingScript = document.getElementById(id);
 
-  function loadScript(url, id) {
-      const existingScript = document.getElementById(id);
-
-      if (existingScript) {
-          console.log(`Script ${url} is already loaded.`);
-          return;  // Exit if the correct script is already loaded
-      }
-
-      unloadScript();  // Remove any existing dynamic script
-
-      // Load the new script
-      const script = document.createElement('script');
-      script.src = url;
-      script.id = id;
-      document.head.appendChild(script);
-      console.log(`Loaded script: ${url}`);
+  if (existingScript) {
+    console.log(`Script ${url} is already loaded.`);
+    return;  // Exit if the correct script is already loaded
   }
 
-  function unloadScript() {
-      const script = document.getElementById('dynamic-script');
-      if (script) {
-          script.remove();
-          console.log(`Unloaded script: ${script.src}`);
-      }
+  // Load the new script
+  const script = document.createElement('script');
+  script.src = url;
+  script.id = id;
+  document.head.appendChild(script);
+  console.log(`Loaded script: ${url}`);
+}
+
+function unloadScript() {
+  const script = document.getElementById('dynamic-script');
+  if (script) {
+    script.remove();
+    console.log(`Unloaded script: ${script.src}`);
   }
+}
 
-  function handleRouteChange() {
-      const path = window.location.pathname || '/';
+function handleRouteChange() {
+  const path = window.location.pathname || '/';
 
-      console.log('Current Path:', path);
+  console.log('Current Path:', path);
 
-      if (path === '/' || path === '/index.html') {
-          loadScript('/path/to/bundle_v=0.2.0.js', 'home-script');  // Replace with the actual path
-      } else if (path === '/services' || path === '/about' || path === '/contact' || path === '/company') {
-          loadScript('/path/to/bundle_v=5.3.13.js', 'other-script');  // Replace with the actual path
-      } else {
-          console.log('No matching path found, no script loaded.');
-      }
+  if (path === '/' || path === '/index.html') {
+    loadScript('/assets/js/bundle_v=0.2.0.js', 'home-script');  // Replace with the correct path
+  } else if (path === '/services' || path === '/about' || path === '/contact' || path === '/company') {
+    loadScript('/assets/js/bundle_v=5.3.13.js', 'other-script');  // Replace with the correct path
+  } else {
+    console.log('No matching path found, no script loaded.');
   }
+}
 
-  window.addEventListener('popstate', handleRouteChange);
-  window.addEventListener('load', handleRouteChange);
+window.addEventListener('popstate', handleRouteChange);
+window.addEventListener('load', handleRouteChange);
 
-  handleRouteChange();  // Ensure it runs initially
-});
+handleRouteChange();  // Ensure it runs initially
 
 
 (() => {
