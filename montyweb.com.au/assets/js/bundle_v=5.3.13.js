@@ -1,59 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
   if (typeof gsap !== 'undefined') {
     console.log('GSAP is ready');
-    
-    // Now that GSAP is confirmed to be ready, execute the main logic
-    function loadScript(url, id) {
-      const existingScript = document.getElementById(id);
 
-      if (existingScript) {
-        console.log(`Script ${url} is already loaded.`);
-        return;  // Exit if the correct script is already loaded
-      }
-
-      unloadScript();  // Remove any existing dynamic script
-
-      // Load the new script
-      const script = document.createElement('script');
-      script.src = url;
-      script.id = id;
-      document.head.appendChild(script);
-      console.log(`Loaded script: ${url}`);
+    // Example: Checking an element before running GSAP animation
+    const element = document.querySelector('.your-element-selector');
+    if (element) {
+      console.log('Element found:', element);
+      gsap.to(element, { duration: 1, x: 100 });
+    } else {
+      console.error('Element not found, GSAP animation skipped.');
     }
-
-    function unloadScript() {
-      const script = document.getElementById('dynamic-script');
-      if (script) {
-        script.remove();
-        console.log(`Unloaded script: ${script.src}`);
-      }
-    }
-
-    function handleRouteChange() {
-      const path = window.location.pathname || '/';
-
-      console.log('Current Path:', path);
-
-      if (path === '/' || path === '/index.html') {
-        loadScript('/path/to/bundle_v=0.2.0.js', 'home-script');  // Replace with the actual path
-      } else if (path === '/services' || path === '/about' || path === '/contact' || path === '/company') {
-        loadScript('/path/to/bundle_v=5.3.13.js', 'other-script');  // Replace with the actual path
-      } else {
-        console.log('No matching path found, no script loaded.');
-      }
-    }
-
-    window.addEventListener('popstate', handleRouteChange);
-    window.addEventListener('load', handleRouteChange);
-
-    handleRouteChange();  // Ensure it runs initially
-
   } else {
     console.error('GSAP is not loaded. Script execution aborted.');
   }
 });
-
-
 
 (() => {
   "use strict";
