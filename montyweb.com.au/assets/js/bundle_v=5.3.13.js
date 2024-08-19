@@ -1,21 +1,24 @@
 function handleRouteChange() {
-  const path = window.location.pathname;
+  const path = window.location.pathname || '/';
 
   console.log('Current Path:', path);
 
-  // Load the correct script based on the current path
   if (path === '/' || path === '/index.html') {
-    console.log('Navigating to Home, loading bundle_v=0.2.0.js');
-    loadScript('/path/to/bundle_v=0.2.0.js'); // Replace with the actual path
+    if (!document.getElementById('home-script')) {
+      unloadScript(); // Make sure no conflicting script is loaded
+      loadScript('/path/to/bundle_v=0.2.0.js'); // Load Home script
+      document.getElementById('dynamic-script').id = 'home-script'; // Mark as Home script
+    }
   } else if (path === '/services' || path === '/about' || path === '/contact') {
-    console.log('Navigating to another page, loading bundle_v=5.3.13.js');
-    loadScript('/path/to/bundle_v=5.3.13.js'); // Replace with the actual path
+    if (!document.getElementById('other-script')) {
+      unloadScript(); // Make sure no conflicting script is loaded
+      loadScript('/path/to/bundle_v=5.3.13.js'); // Load Other pages script
+      document.getElementById('dynamic-script').id = 'other-script'; // Mark as Other script
+    }
+  } else {
+    console.log('No matching path found, no script loaded.');
   }
 }
-
-window.addEventListener('popstate', handleRouteChange);
-window.addEventListener('load', handleRouteChange);
-
 
 (() => {
   "use strict";
