@@ -1,3 +1,4 @@
+console.log('Script is running');
 (() => {
   "use strict";
   function e() {
@@ -1018,6 +1019,9 @@
             v,
             y = a() - u,
             x = !0 === h;
+
+          console.log("Initial values:", { y, x, h });
+
           if (
             ((y > o || y < 0) && (c += y - l),
             ((d = (f = (u += y) - c) - g) > 0 || x) &&
@@ -1028,7 +1032,11 @@
               (p = 1)),
             x || (e = t(i)),
             p)
-          )
+          ) {
+             console.log("Condition met, proceeding with animation logic:", { f, r, v, h });
+          } else {
+              console.error("Condition failed, skipping animation logic");
+          }
             for (s = 0; s < _.length; s++) _[s](f, r, v, h);
         };
       return (
