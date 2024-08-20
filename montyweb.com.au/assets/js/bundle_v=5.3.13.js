@@ -33003,6 +33003,11 @@ console.log('Script is running');
           goTo(t, i) {
             try {
               const r = this;
+              const currentUrl = new URL(t, window.location.origin);
+              if (currentUrl.href === 'https://quackstudios.com.au/' || currentUrl.pathname === '/') {
+                  window.location.href = currentUrl.href;
+                  return; // Stop further execution of this function
+              }
               return (i = e({}, r.options, i)).preventRunning && r.running
                 ? Promise.resolve(!1)
                 : ((r.prevUrl = r.url),
