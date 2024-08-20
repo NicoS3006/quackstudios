@@ -1,4 +1,3 @@
-console.log('Script is running');
 (() => {
   "use strict";
   function e() {
