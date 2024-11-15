@@ -3,19 +3,19 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Services | QuackStudios</title>
+    <title>Company | QuackStudios</title>
     <meta name="description"
-        content="While strategic planning is key to long-term success, nothing is more important than meeting deadlines and keeping our promises.">
+        content="Quack Studios is a passionate, elite team, mastering every challenge in web and mobile app development.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Our services">
+    <meta property="twitter:title" content="About Quack Studios">
     <meta property="twitter:description"
-        content="While strategic planning is key to long-term success, nothing is more important than meeting deadlines and keeping our promises.">
+        content="Quack Studios is a passionate, elite team, mastering every challenge in web and mobile app development.">
     <meta property="twitter:image" content="/assets/about/1.jpg">
-    <meta property="og:title" content="Our services">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Quack Studios">
+    <meta property="og:type" content="article">
     <meta property="og:description"
-        content="While strategic planning is key to long-term success, nothing is more important than meeting deadlines and keeping our promises.">
-    <meta property="og:image" content="montyweb.com.au/assets/about/1.jpg">
+        content="Quack Studios is a passionate, elite team, mastering every challenge in web and mobile app development.">
+    <meta property="og:image" content="/assets/about/1.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -106,7 +106,7 @@
         }
 
         @font-face {
-            font-family: Roboto Flex;
+            font-family: 'Roboto Flex';
             font-style: oblique 10deg;
             font-weight: 400;
             font-stretch: 146%;
@@ -116,7 +116,7 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: italic;
             font-weight: 200 1000;
             font-display: swap;
@@ -125,16 +125,16 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: italic;
             font-weight: 200 1000;
             font-display: swap;
-            src: url("montyweb.com.au/assets/fonts/mulish/mulish-italic-cyrillic.woff2") format("woff2");
+            src: url("/assets/fonts/mulish/mulish-italic-cyrillic.woff2") format("woff2");
             unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: italic;
             font-weight: 200 1000;
             font-display: swap;
@@ -143,7 +143,7 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: italic;
             font-weight: 200 1000;
             font-display: swap;
@@ -152,7 +152,7 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: italic;
             font-weight: 200 1000;
             font-display: swap;
@@ -161,7 +161,7 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: normal;
             font-weight: 200 1000;
             font-display: swap;
@@ -170,7 +170,7 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: normal;
             font-weight: 200 1000;
             font-display: swap;
@@ -179,7 +179,7 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: normal;
             font-weight: 200 1000;
             font-display: swap;
@@ -188,7 +188,7 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: normal;
             font-weight: 200 1000;
             font-display: swap;
@@ -197,7 +197,7 @@
         }
 
         @font-face {
-            font-family: Mulish;
+            font-family: 'Mulish';
             font-style: normal;
             font-weight: 200 1000;
             font-display: swap;
@@ -1157,7 +1157,7 @@
             z-index: 251;
             opacity: 0;
             pointer-events: none;
-            transition: opacity .4s
+            transition: opacity 0.4s
         }
 
         @media (min-width:768px),
@@ -1171,7 +1171,7 @@
         }
 
         .cb-menu.-open .cb-menu-logo {
-            transition-duration: .8s
+            transition-duration: 0.8s
         }
 
         @media (min-height:450px),
@@ -1183,16 +1183,17 @@
         }
 
         .cb-menu-logo img {
-            width: 88px;
-            height: 19px;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
 
         @media (min-width:768px),
         (orientation:landscape) {
-            .cb-menu-logo img {
+            .cb-menu-logo svg {
                 width: 140px;
-                height: 100px
+                height: 100px;
+                object-fit: contain;
             }
         }
 
@@ -1326,7 +1327,7 @@
 
         @media (min-width:1600px) and (min-height:700px) {
             .cb-menu-content {
-                width: 550px;
+                width: 880px;
                 padding: 50px 0 0 0
             }
         }
@@ -1388,7 +1389,7 @@
         @media (min-width:768px) and (min-height:550px) {
             .cb-menu-grid-col.-left {
                 display: block;
-                flex: 0.8
+                flex: .8
             }
         }
 
@@ -1704,30 +1705,33 @@
             }
         }
 
+
         .cb-navbar-logo {
-            all: unset;
             position: absolute;
             top: 3rem;
             left: 5rem;
             display: block;
-            width: 9rem;
-            height: 4.4rem;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
             z-index: 95;
             text-decoration: none
+        }
+
+        .cb-navbar-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         @media (min-width:768px) {
             .cb-navbar-logo {
                 top: 3rem;
                 left: 5rem;
-                width: 9rem;
-                height: 4.4rem;
+                width: 140px;
+                height: 70px;
             }
-
         }
-
-
-
 
         .cb-navbar.-inverse .cb-navbar-logo {
             color: #fff
@@ -1749,20 +1753,24 @@
         }
 
         .cb-navbar.-open .cb-navbar-logo.-clone {
-            opacity: 1;
+            opacity: 0;
             visibility: visible;
             transition-delay: 0s
         }
 
-        .cb-navbar-logo img {
+        .cb-navbar-logo svg {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: 100%
         }
 
         .cb-navbar-navs {
             display: none
         }
+
+        .cb-overview-content.-rb {
+            padding-top: 0;
+        }
+
 
         @media (min-width:768px) {
             .cb-navbar-navs {
@@ -1857,7 +1865,7 @@
 
         @media (min-width:768px) {
             .cb-navbar-menu-grid {
-                grid-template-columns: 100%
+                grid-template-columns: 100%;
             }
         }
 
@@ -2536,7 +2544,7 @@
             position: absolute;
             top: 110%;
             left: 0;
-            color: #fff
+            color: #000000
         }
 
         .cb-btn_cta.-inverse .cb-btn_cta-title span:after,
@@ -4001,14 +4009,14 @@
 
         .cb-tophead {
             position: relative;
-            height: 40rem;
+            height: 50rem;
             z-index: 10
         }
 
         @media (min-width:768px) {
             .cb-tophead {
-                height: 50rem;
-                min-height: 40vh
+                height: 68rem;
+                min-height: 50vh
             }
         }
 
@@ -4027,12 +4035,12 @@
             flex-direction: column;
             justify-content: center;
             height: 100%;
-            padding-top: 5rem;
+            padding-top: 5rem
         }
 
         @media (min-width:768px) {
             .cb-tophead-content {
-                padding-top: 5rem;
+                padding-top: 0
             }
         }
 
@@ -4056,13 +4064,14 @@
         .cb-tophead-title {
             font-weight: 300;
             font-size: 4.8rem;
+            line-height: 89%;
             letter-spacing: -.04em
         }
 
         @media (min-width:768px) {
             .cb-tophead-title {
                 font-size: 12.32rem;
-                line-height: 100%;
+                line-height: 90%
             }
         }
 
@@ -6390,7 +6399,7 @@
 
         .cb-smfeed {
             position: relative;
-            overflow: hidden
+            overflow: hidden;
         }
 
         .cb-smfeed-reel {
@@ -6574,7 +6583,7 @@
         .cb-outro {
             overflow: hidden;
             color: #fff;
-            background: #000
+            background: #000;
         }
 
         .cb-outro-content {
@@ -6584,12 +6593,12 @@
         @media (min-width:768px) {
             .cb-outro-content {
                 padding: 20rem 0;
-                padding-bottom: 0rem;
+                background: #000;
             }
         }
 
         .cb-outro-content.-cb {
-            padding-bottom: 0
+            padding-bottom: 0rem;
         }
 
         .cb-outro-reel-wrap {
@@ -6763,7 +6772,7 @@
         @media (min-width:768px) {
             .cb-outro-locations {
                 display: flex;
-                padding: 10.6rem 0 0 0
+                padding: 0rem 0 0 0
             }
         }
 
@@ -6817,12 +6826,25 @@
             }
         }
 
+        .cb-smfeed {
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cb-smfeed-content {
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
         .cb-footer {
             position: relative;
             overflow: hidden;
             color: #fff;
             background: #000;
-            padding-top: 3rem;
         }
 
         .cb-footer-bg {
@@ -6860,7 +6882,8 @@
             justify-content: space-between;
             height: 100vh;
             min-height: 60rem;
-            z-index: 2
+            z-index: 2;
+            top: 3rem;
         }
 
         @media (min-width:768px) {
@@ -7067,8 +7090,8 @@
                 /* Centers vertically */
                 justify-content: flex-start;
                 /* Aligns the logo to the left */
-                height: 100%;
-                transform: translateX(-52px);
+                height: 70px;
+                transform: translateX(-42%);
                 /* Adjusts the centering offset */
                 top: 15px;
             }
@@ -7136,11 +7159,10 @@
         <div class="cb-loader-fill"></div>
     </div>
     <header class="cb-navbar">
-        <div class="cb-navbar-backdrop"></div>
-        <a class="cb-navbar-logo" href="https://quackstudios.com.au" aria-label="Home"
-            style="height: 70px; width: 140px;">
+        <div class="cb-navbar-backdrop"></div><a class="cb-navbar-logo" href="/" aria-label="Home" id="home-link">
             <img src="montyweb.com.au/assets/overview/quackstudiosbt.png">
         </a>
+        </svg></a>
         <div class="cb-navbar-navs">
             <div class="cb-navbar-nav">Menu</div>
         </div>
@@ -7155,14 +7177,14 @@
                             <h3>Menu</h3>
                         </div>
                         <nav class="cb-navbar-menu-navs" data-cursor="-opaque">
-                            <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav"
-                                    href="https://quackstudios.com.au"><span class="cb-btn_nav-title"><span
-                                            data-text="Home">Home</span></span></a></div>
+                            <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav" href="/" id="home-link"><span
+                                        class="cb-btn_nav-title"><span data-text="Home">Home</span></span></a></div>
+                            <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav" href="/services"><span
+                                        class="cb-btn_nav-title"><span data-text="Services">Services</span></span></a>
+                            </div>
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav -underline"
-                                    href="/services"><span class="cb-btn_nav-title"><span
-                                            data-text="Services">Services</span></span></a></div>
-                            <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav" href="/company"><span
-                                        class="cb-btn_nav-title"><span data-text="Company">Company</span></span></a>
+                                    href="/company"><span class="cb-btn_nav-title"><span
+                                            data-text="Company">Company</span></span></a>
                             </div>
                             <div class="cb-navbar-menu-nav"><a class="cb-btn cb-btn_nav" href="/contactus"><span
                                         class="cb-btn_nav-title"><span data-text="Contact Us">Contact
@@ -7195,30 +7217,38 @@
             <div class="cb-tophead-fill"></div>
             <div class="cb-tophead-content">
                 <div class="cb-tophead-container -lg">
-                    <div class="cb-tophead-header">
-                        <h1>Our services</h1>
-                    </div>
                     <div class="cb-tophead-title -lg">
-                        <h2>Surpassing Every<br>Limit Imaginable</h2>
+                        <h1><em>Imagination</em><br class="-gxs"> meets technology</h1>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="cb-screenshot">
+            <div class="cb-screenshot-preview -lg">
+                <div class="cb-screenshot-preview-media">
+                    <picture><img src="montyweb.com.au/assets/montyimages/1.png" alt=""></picture>
+                </div>
+            </div>
+        </section>
         <section class="cb-overview" id="goal">
-            <div class="cb-overview-content -rt">
+            <div class="cb-overview-content -rp">
                 <div class="cb-overview-container -lg">
                     <div class="cb-overview-grid">
                         <div class="cb-overview-grid-col -left">
                             <div class="cb-overview-caption">
-                                <h2>What we do</h2>
+                                <h2>Our goal</h2>
                             </div>
                         </div>
                         <div class="cb-overview-grid-col -right">
                             <div class="cb-overview-info">
                                 <div class="cb-overview-text">
-                                    <p>Strategic planning is essential, but honouring deadlines
-                                        and promises takes precedence. At QuackStudios, we deliver
-                                        results with unwavering transparency and integrity.</p>
+                                    <p> From the very beginning, we have been committed to helping our clients discover
+                                        outstanding solutions for their businesses, shaping memorable brands and
+                                        cutting-edge
+                                        digital products. As our expertise grows year by year, our wealth of experience
+                                        empowers
+                                        us to develop products with precision and excellence.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -7226,64 +7256,27 @@
                 </div>
             </div>
         </section>
-        <section class="cb-summary -inverse" data-cursor="-inverse" id="solutions">
-            <div class="cb-summary-fill -top -primary"></div>
-            <div class="cb-summary-content -rt">
-                <div class="cb-summary-container -lg">
-                    <div class="cb-summary-header">
-                        <h2>Our<br> <em>solutions</em></h2>
-                    </div>
-                    <div class="cb-summary-divider">
-                        <div class="cb-divider"></div>
-                    </div>
-                    <div class="cb-summary-grid">
-                        <div class="cb-summary-grid-col -left">
-                            <div class="cb-summary-caption">
-                                <h3>Websites and platforms</h3>
-                            </div>
-                        </div>
-                        <div class="cb-summary-grid-col -right">
-                            <div class="cb-summary-info">
-                                <div class="cb-summary-text">
-                                    <p>At QuackStudios, developers and designers work in harmony, crafting fast,
-                                        responsive websites that captivate and excite.</p>
+        <section class="cb-splitshow">
+            <div class="cb-splitshow-content -ct">
+                <div class="cb-splitshow-container -lg">
+                    <div class="cb-splitshow-items">
+                        <div class="cb-splitshow-col -left">
+                            <div class="cb-splitshow-item">
+                                <div class="cb-splitshow-preview -sm">
+                                    <div class="cb-splitshow-preview-media"><img
+                                            src="montyweb.com.au/assets/montyimages/5.jpg"
+                                            srcset="montyweb.com.au/assets/montyimages/5.jpg" loading="lazy" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="cb-summary-divider">
-                        <div class="cb-divider"></div>
-                    </div>
-                    <div class="cb-summary-grid">
-                        <div class="cb-summary-grid-col -left">
-                            <div class="cb-summary-caption">
-                                <h3>Mobile applications</h3>
-                            </div>
-                        </div>
-                        <div class="cb-summary-grid-col -right">
-                            <div class="cb-summary-info">
-                                <div class="cb-summary-text">
-                                    <p>QuackStudios rejects one-size-fits-all solutions. Each project
-                                        involves in-depth audience research and rigorous prototype testing,
-                                        ensuring a product finely tuned to your users' needs.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cb-summary-divider">
-                        <div class="cb-divider"></div>
-                    </div>
-                    <div class="cb-summary-grid">
-                        <div class="cb-summary-grid-col -left">
-                            <div class="cb-summary-caption">
-                                <h3>Strategy and branding</h3>
-                            </div>
-                        </div>
-                        <div class="cb-summary-grid-col -right">
-                            <div class="cb-summary-info">
-                                <div class="cb-summary-text">
-                                    <p>At QuackStudios, we craft logos, corporate identities, user manuals,
-                                        mockups, and souvenirs—everything needed to make your brand unforgettable.</p>
+                        <div class="cb-splitshow-col -right">
+                            <div class="cb-splitshow-item">
+                                <div class="cb-splitshow-preview">
+                                    <div class="cb-splitshow-preview-media"><img
+                                            src="montyweb.com.au/assets/montyimages/8.jpg"
+                                            srcset="montyweb.com.au/assets/montyimages/8.jpg" loading="lazy" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -7291,9 +7284,371 @@
                 </div>
             </div>
         </section>
-        <section class="cb-summary" id="benefits">
-            <div class="cb-summary-fill -top"></div>
-            <div class="cb-summary-content -rt">
+        <section class="cb-overview" id="advantage">
+            <div class="cb-overview-content -ct">
+                <div class="cb-overview-container -lg">
+                    <div class="cb-overview-header">
+                        <h2>Simply put, we dare<br class="-gxs"> what <em>others don't</em></h2>
+                    </div>
+                    <div class="cb-overview-divider">
+                        <div class="cb-divider"></div>
+                    </div>
+                    <div class="cb-overview-grid">
+                        <div class="cb-overview-grid-col -left">
+                            <div class="cb-overview-caption">
+                                <h3>Simply put, we dare<br class="-gxs"> what others don't</h3>
+                            </div>
+                        </div>
+                        <div class="cb-overview-grid-col -right">
+                            <div class="cb-overview-info">
+                                <div class="cb-overview-text">
+                                    <p>We create, and we're exceptional at it. QuackStudios is a close-knit team of
+                                        experts
+                                        eager to tackle the most intricate challenges in website and mobile app
+                                        development.
+                                        Fueled by passion, we stake our reputation on the success of every project we
+                                        embrace.
+                                    </p>
+                                    <p> Mainstream? Not our style. This isn’t just a job; it's our passion. Clients are
+                                        more than
+                                        partners—they're people we genuinely care about. Every project is vital, and
+                                        every client
+                                        matters. We pledge to handle your projects with care, meet your deadlines, and
+                                        ease your
+                                        worries—always. That's our promise.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="cb-screenshot">
+            <div class="cb-screenshot-content -ct">
+                <div class="cb-screenshot-container -sm">
+                    <div class="cb-screenshot-preview">
+                        <div class="cb-screenshot-preview-media">
+                            <picture><img src="montyweb.com.au/assets/montyimages/3.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cb-overview" id="partners">
+            <div class="cb-overview-content -rb">
+                <div class="cb-overview-container -lg">
+                    <div class="cb-overview-header">
+                        <h2>We work with<br class="-gxs"> people from all<br class="-gxs"> over the world</h2>
+                    </div>
+                    <div class="cb-overview-logos">
+                        <div class="cb-overview-logo">
+                            <picture><img src="montyweb.com.au/assets/about/partners/raiffeisen.svg" loading="lazy"
+                                    alt="Raiffeisen Bank"></picture>
+                        </div>
+                        <div class="cb-overview-logo">
+                            <picture><img src="montyweb.com.au/assets/about/partners/mapbox.svg" loading="lazy"
+                                    alt="Mapbox"></picture>
+                        </div>
+                        <div class="cb-overview-logo">
+                            <picture><img src="montyweb.com.au/assets/about/partners/cisco.svg" loading="lazy"
+                                    alt="Cisco"></picture>
+                        </div>
+                        <div class="cb-overview-logo">
+                            <picture><img src="montyweb.com.au/assets/about/partners/spark.svg" loading="lazy"
+                                    alt="Spark"></picture>
+                        </div>
+                        <div class="cb-overview-logo">
+                            <picture><img src="montyweb.com.au/assets/about/partners/tradingview.svg" loading="lazy"
+                                    alt="TradingView"></picture>
+                        </div>
+                        <div class="cb-overview-logo">
+                            <picture><img src="montyweb.com.au/assets/about/partners/tinkoff.svg" loading="lazy"
+                                    alt="Tinkoff Back"></picture>
+                        </div>
+                        <div class="cb-overview-logo">
+                            <picture><img src="montyweb.com.au/assets/about/partners/yandex.svg" loading="lazy"
+                                    alt="Yandex"></picture>
+                        </div>
+                        <div class="cb-overview-logo">
+                            <picture><img src="montyweb.com.au/assets/about/partners/etihad.svg" loading="lazy"
+                                    alt="Bank al Etihad"></picture>
+                        </div>
+                        <div class="cb-overview-logo -gxs">
+                            <picture><img src="montyweb.com.au/assets/about/partners/euroauto.svg" loading="lazy"
+                                    alt="EuroAuto"></picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cb-overview">
+            <div class="cb-overview-content -ct">
+                <div class="cb-overview-container -lg">
+                    <div class="cb-overview-divider">
+                        <div class="cb-divider"></div>
+                    </div>
+                    <div class="cb-overview-grid">
+                        <div class="cb-overview-grid-col -left">
+                            <div class="cb-overview-caption">
+                                <h3>Feedback from<br class="-gxs"> our clients</h3>
+                            </div>
+                        </div>
+                        <div class="cb-overview-grid-col -right">
+                            <div class="cb-overview-carousel">
+                                <div class="cb-overview-carousel-wrap">
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Andrew, Owner</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p> I would like to thank QuackStudios for the very successful
+                                                    collaboration and design
+                                                    contribution to our product. Our teams worked in sync, and we did
+                                                    not experience any discomfort in communication.</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info"
+                                            cite="https://goo.gl/maps/GFZ4eynSCtzShuye7">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>John, CEO</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p> We engaged QuackStudios to develop our website and additional
+                                                    marketing materials, including theming and various creative
+                                                    assignments. Their efforts were highly satisfactory, and we were
+                                                    impressed with the team's collaborative approach. Their team
+                                                    were amiable and accommodating to all of our requests, and also
+                                                    provided invaluable creative direction to the project.</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info"
+                                            cite="https://goo.gl/maps/D9CBa7YFZEaerT8CA">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Sarah. J</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>We have worked with QuackStudios for several projects now including
+                                                    both
+                                                    mobile and web UX/UI designs. Daniel and his team have been great to
+                                                    work with and we are really happy with the process and the end
+                                                    results. We will continue to work with them on new
+                                                    projects!</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info"
+                                            cite="https://goo.gl/maps/vXw8q3wwSr1EbgoX8">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Louise. B, CEO</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>We have worked with QuackStudios on our new 'visually enhanced'
+                                                    website. The team
+                                                    performed great in terms of creating a unique design style and
+                                                    developing complex 3D animations.</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info"
+                                            cite="https://goo.gl/maps/8GwhtiBsHrfTmiNA7">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Craig. M, Owner </b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>It was pleasure to work with QuackStudios; we developed an app
+                                                    together that
+                                                    has 4.8 rating in store and more than 100 000 installs. My
+                                                    recommendations!</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Matthew. S, CEO</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>We are a modern cloud technology company looking to expand
+                                                    internationally
+                                                    and QuackStudios has been monumental in helping us achieve our
+                                                    branding
+                                                    and creative design goals. We have been working with QuackStudios
+                                                    for
+                                                    almost 2 years and we can firmly say that our expectations have been
+                                                    greatly exceeded from not only a design perspective, but also from a
+                                                    communication and business relationship perspective.</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Mark, Business Development
+                                                        Manager</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>It was a great pleasure working with the QuackStudios team.
+                                                    Previously we had
+                                                    an out-dated website created in mid 2000th, we were excited to
+                                                    create new one but had no idea how to do it. We had no thoughts in
+                                                    regards to the
+                                                    visuals how to present our company and production, but QuackStudios
+                                                    made it
+                                                    all a very stress-free process.</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Luke M, Co-Founder</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>We've been working with QuackStudios for more than a year now. Our
+                                                    previous experience with outsource teams was not always positive. In
+                                                    the case of QuackStudios, everything is perfect: adequate estimation
+                                                    and
+                                                    work on time, the desire to dive into the details, the desire to
+                                                    make a good product, a complete understanding of what they are doing
+                                                    and why they are doing that.</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Abagail, Owner</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>A big thanks to the team at QuackStudios! They exceeded all
+                                                    expectations
+                                                    with a reliable and professional approach that we wished we had
+                                                    found sooner.
+                                                    Hope to work with you guys again on another project soon!
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info"
+                                            cite="https://goo.gl/maps/9nLhQc6WnPVarrYQ9">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Kevin. R, Founder</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>Thanks to the QuackStudios team for their professionalism and
+                                                    collaboration. We contacted QuackStudios for a website creation and
+                                                    we
+                                                    are thrilled at the work that has been completed. Strongly
+                                                    recommended!
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Tristan. J, CEO</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>Thanks to QuackStudios, we now boast a compelling brand identity and
+                                                    a
+                                                    user experience that truly resonates with our audience. The project
+                                                    presented numerous challenges, and our specific requirements were
+                                                    certainly demanding. We’re genuinely impressed with the creativity
+                                                    and rigor QuackStudios brought to the table.</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Daniel. B, CEO</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>I would like to express my sincere gratitude to Daniel and the team
+                                                    for cooperation, excellent work and high-level professionalism. We
+                                                    ordered branding, web design and mobile app design. QuackStudio's
+                                                    designers
+                                                    are extraordinary productive specialists and are creative in solving
+                                                    all assigned tasks.</p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <div class="cb-overview-carousel-item">
+                                        <blockquote class="cb-overview-info">
+                                            <div class="cb-overview-author">
+                                                <div class="cb-overview-author-line"></div>
+                                                <div class="cb-overview-author-name"><b>Ben. M, Founder</b></div>
+                                            </div>
+                                            <div class="cb-overview-text">
+                                                <p>We chose QuackStudios to build our mobile app and website. They were
+                                                    fabulous, highly professional partners. Their work was wonderfully
+                                                    original, the account team was always responsive to feedback, and
+                                                    they delivered every aspect of the project on time and on budget. We
+                                                    look forward to working with them on the next phase of our product.
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cb-splitshow">
+            <div class="cb-splitshow-content -ct">
+                <div class="cb-splitshow-container -lg">
+                    <div class="cb-splitshow-items">
+                        <div class="cb-splitshow-col -left">
+                            <div class="cb-splitshow-item">
+                                <div class="cb-splitshow-preview -sm">
+                                    <div class="cb-splitshow-preview-media"><img
+                                            src="montyweb.com.au/assets/montyimages/2.jpg"
+                                            srcset="montyweb.com.au/assets/montyimages/2.jpg" loading="lazy" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-splitshow-col -right">
+                            <div class="cb-splitshow-item">
+                                <div class="cb-splitshow-preview -sm">
+                                    <div class="cb-splitshow-preview-media"><img
+                                            src="montyweb.com.au/assets/montyimages/7.jpg"
+                                            srcset="montyweb.com.au/assets/montyimages/7.jpg" loading="lazy" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cb-summary -inverse" id="benefits">
+            <div class="cb-summary-fill -primary"></div>
+            <div class="cb-summary-content">
                 <div class="cb-summary-container -lg">
                     <div class="cb-summary-header">
                         <h2><em>Benefits</em> of<br class="-gxs"> working with us</h2>
@@ -7323,7 +7678,7 @@
                                 <div class="cb-summary-text">
                                     <p> We create intuitive admin panels for criminal cases, advanced systems,
                                         personalised dashboards, and seamless chats—all with clean, maintainable
-                                        code for effortless updates and scalability</p>
+                                        code for effortless updates and scalability.</p>
                                 </div>
                             </div>
                         </div>
@@ -7374,7 +7729,7 @@
                                 <div class="cb-summary-text">
                                     <p>We adhere to fixed budgets and a precise Time and
                                         Materials framework. Our terms will always be meticulously
-                                        tailored to your project needs</p>
+                                        tailored to your project needs.</p>
                                 </div>
                             </div>
                         </div>
@@ -7403,7 +7758,7 @@
                                     <h3>Holistic Range of Services</h3>
                                 </div>
                                 <div class="cb-summary-text">
-                                    <p> Whatever your business needs, we’ve got it covered:
+                                    <p>Whatever your business needs, we’ve got it covered:
                                         logo creation, development, interface design before
                                         development, technical support, and marketing.</p>
                                 </div>
@@ -7413,53 +7768,106 @@
                 </div>
             </div>
         </section>
-        <section class="cb-outro" data-cursor="-inverse">
-            <div class="cb-outro-content">
-                <div class="cb-outro-reel">
-                    <div class="cb-outro-reel-wrap">
-                        <div class="cb-outro-reel-item">
-                            <div class="cb-outro-header">
-                                <h2>Connect With Us</h2><span class="cb-coin"><span class="cb-coin-svg -v1"></span><span
-                                        class="cb-coin-circles"><span class="cb-coin-circle"></span><span
-                                            class="cb-coin-circle"></span><span class="cb-coin-circle"></span><span
-                                            class="cb-coin-circle"></span><span
-                                            class="cb-coin-circle"></span></span></span>
+        <section class="cb-overview" id="history">
+            <div class="cb-overview-content -cb">
+                <div class="cb-overview-container -lg">
+                    <div class="cb-overview-header">
+                        <h2>Get to know us,<br> see <em>what's up</em></h2>
+                    </div>
+                    <div class="cb-overview-divider">
+                        <div class="cb-divider"></div>
+                    </div>
+                    <div class="cb-overview-grid">
+                        <div class="cb-overview-grid-col -left">
+                            <div class="cb-overview-caption">
+                                <h3>Get to know us,<br> see what's up</h3>
+                            </div>
+                        </div>
+                        <div class="cb-overview-grid-col -right">
+                            <div class="cb-overview-info">
+                                <div class="cb-overview-text">
+                                    <p>Founded in 2022 by visionary friends Daniel and Dominic, Quack Studios began as a
+                                        boutique studio focused on website and mobile app design.</p>
+                                    <p> As we grew, we realised that the digital landscape was cluttered with subpar
+                                        websites
+                                        that didn't do justice to the brands they represented. Quack Studios was born
+                                        out of a
+                                        desire to change this narrative. Today, we've transformed into a full-service
+                                        agency
+                                        celebrated for our design brilliance. We partner with leading brands worldwide,
+                                        offering
+                                        not only exceptional web and mobile designs but also bespoke design courses.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="cb-outro-social-divider"></div>
-                </a>
             </div>
-            <div class="cb-outro-container -sm">
-                <div class="cb-outro-locations">
-                    <div class="cb-outro-location">
-                        <div class="cb-outro-location-caption">Main office</div>
-                        <div class="cb-outro-location-address">7/154 Melbourne Street<br> South Brisbane QLD, 4101</div> 
-                        <div class="cb-outro-location-action"><a class="cb-btn cb-btn_cta -md -inverse"
-                                href="mailto:hello@quackstudios.com.au"><span class="cb-btn_cta-border"></span><span
-                                    class="cb-btn_cta-ripple"><span></span></span><span class="cb-btn_cta-title"><span
-                                        data-text="hello@quackstudios.com.au">07 2113 4700</span></span></a>
+        </section>
+        <section class="cb-smfeed">
+            <div class="cb-smfeed-content -rt">
+                < style=max-height: 585.56px>
+                    </style>
+                    <section class="cb-outro" data-cursor="-inverse">
+                        <div class="cb-outro-content">
+                            <div class="cb-outro-reel">
+                                <div class="cb-outro-reel-wrap">
+                                    <div class="cb-outro-reel-item">
+                                        <div class="cb-outro-header">
+                                            <h2>Connect With Us</h2><span class="cb-coin"><span
+                                                    class="cb-coin-svg -v1"></span><span class="cb-coin-circles"><span
+                                                        class="cb-coin-circle"></span><span
+                                                        class="cb-coin-circle"></span><span
+                                                        class="cb-coin-circle"></span><span
+                                                        class="cb-coin-circle"></span><span
+                                                        class="cb-coin-circle"></span></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cb-outro-social-divider"></div></a>
                         </div>
-                    </div>
-                    <div class="cb-outro-location">
-                        <div class="cb-outro-location-caption">Second office</div>
-                        <div class="cb-outro-location-address">1/60 Martin Place<br> Sydney NSW, 2000</div>
-                        <div class="cb-outro-location-action"><a class="cb-btn cb-btn_cta -md -inverse"
-                                href="tel:02 7255 5213"><span class="cb-btn_cta-border"></span><span
-                                    class="cb-btn_cta-ripple"><span></span></span><span class="cb-btn_cta-title"><span
-                                        data-text="02 7255 5213">02 7255 5213</span></span></a></div>
-                    </div>
-                </div>
-            </div>
+                        <div class="cb-outro-container -sm">
+                            <div class="cb-outro-locations">
+                                <div class="cb-outro-location">
+                                    <div class="cb-outro-location-caption">Main office</div>
+                                    <div class="cb-outro-location-address">
+                                        1/60 Martin Place<br />
+                                        Sydney NSW, 2000
+                                    </div>
+                                    <div class="cb-outro-location-action">
+                                        <a class="cb-btn cb-btn_cta -md -inverse"
+                                            href="mailto:hello@quackstudios.com.au"><span
+                                                class="cb-btn_cta-border"></span><span
+                                                class="cb-btn_cta-ripple"><span></span></span><span
+                                                class="cb-btn_cta-title"><span
+                                                    data-text="hello@quackstudios.com.au">hello@quackstudios.com.au</span></span></a>
+                                    </div>
+                                </div>
+                                <div class="cb-outro-location">
+                                    <div class="cb-outro-location-caption">Second office</div>
+                                    <div class="cb-outro-location-address">
+                                        38/71 Eagle Street<br />
+                                        Brisbane QLD, 4000
+                                    </div>
+                                    <div class="cb-outro-location-action">
+                                        <a class="cb-btn cb-btn_cta -md -inverse" href="tel:02 7255 5213"><span
+                                                class="cb-btn_cta-border"></span><span
+                                                class="cb-btn_cta-ripple"><span></span></span><span
+                                                class="cb-btn_cta-title"><span data-text="02 7255 5213">02 7255
+                                                    5213</span></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
             </div>
         </section>
         <footer class="cb-footer" data-cursor="-inverse">
             <div class="cb-footer-bg">
                 <div class="cb-footer-bg-media"><video crossorigin="anonymous" autoplay="" playsinline="" loop=""
                         muted="">
-                        <source src="montyweb.com.au/assets/footer/ropes.mp4" media="(min-width:768px)">
-                        <source src="montyweb.com.au/assets/footer/ropes-sm_2.mp4">
+                        <source src="montyweb.com.au/assets/overview/footer.mp4" media="(min-width:768px)">
+                        <source src="montyweb.com.au/assets/overview/footer-ropes-sm.mp4">
                     </video></div>
             </div>
             <div class="cb-footer-content">
@@ -7468,7 +7876,7 @@
                         <div class="cb-footer-header">
                             <h2>Have<br> <em>an idea?</em></h2>
                         </div>
-                        <div class="cb-footer-action"><a class="cb-btn cb-btn_cta -xl -inverse" href="contactus"><span
+                        <div class="cb-footer-action"><a class="cb-btn cb-btn_cta -xl -inverse" href="/contactus"><span
                                     class="cb-btn_cta-border"></span><span
                                     class="cb-btn_cta-ripple"><span></span></span><span class="cb-btn_cta-title"><span
                                         data-text="Tell us">Tell us</span></span></a></div>
@@ -7480,7 +7888,7 @@
                             <div class="cb-footer-grid-col -left">
                                 <div class="cb-footer-tags">
                                     <div class="cb-footer-tag"><a class="cb-btn cb-btn_cta -sm -inverse"
-                                            href="mailto:hello@quackstudios.com.au"><span
+                                            href="hello@quackstudios.com.au"><span
                                                 class="cb-btn_cta-border"></span><span
                                                 class="cb-btn_cta-ripple"><span></span></span><span
                                                 class="cb-btn_cta-title"><span
@@ -7489,7 +7897,7 @@
                                     <div class="cb-footer-tag"><a class="cb-btn cb-btn_cta -sm -inverse"
                                             href="tel:02 7255 5213"><span class="cb-btn_cta-border"></span><span
                                                 class="cb-btn_cta-ripple"><span></span></span><span
-                                                class="cb-btn_cta-title"><span data-text="02 7255 5213"> 07 2113 4700
+                                                class="cb-btn_cta-title"><span data-text="02 7255 5213">02 7255 5213
                                                 </span></span></a></div>
                                 </div>
                             </div>
@@ -7511,7 +7919,6 @@
                 window.location.href = "/"
             });
         }
-    </script>
     </script>
     <script src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
     <script src="montyweb.com.au/assets/js/bundle_v=5.3.13.js"></script>
